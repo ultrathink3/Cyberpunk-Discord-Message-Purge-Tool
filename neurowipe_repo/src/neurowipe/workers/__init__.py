@@ -1,0 +1,1 @@
+"""Worker threads bridging async core to Qt GUI."""

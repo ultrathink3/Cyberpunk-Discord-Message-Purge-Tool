@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurowipe"
+version = "1.0.0"
+description = "Cyberpunk Discord Message Purge Tool — Erase Your Digital Trace"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "PySide6>=6.6,<7.0",
+    "httpx[http2]>=0.27",
+    "aiosqlite>=0.20",
+    "keyring>=25.0",
+    "cryptography>=42.0",
+    "pyqtgraph>=0.13.7",
+    "apscheduler>=3.10,<4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-qt",
+    "respx",
+    "pyinstaller",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+neurowipe = "neurowipe.app:main"
+
+[project.gui-scripts]
+neurowipe-gui = "neurowipe.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
