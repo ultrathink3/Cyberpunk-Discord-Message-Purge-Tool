@@ -1,5 +1,6 @@
 🏙️ Neurowipe
 Cyberpunk Discord Message Purge Tool — Erase Your Digital Trace
+<img width="530" height="479" alt="image" src="https://github.com/user-attachments/assets/30fec857-1d7d-4e02-9a7e-decebf6d20d2" />
 
 License: MIT Python: 3.10+
 
